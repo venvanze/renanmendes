@@ -1,0 +1,8 @@
+.only-mobile { display: flex; }
+.only-desktop { display: none; }
+
+@media (width >= 48rem) {
+  .only-mobile { display: none !important; }
+  .only-desktop { display: flex !important; }
+}
+
