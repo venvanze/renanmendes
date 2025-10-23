@@ -15,7 +15,7 @@ import imgASmilingWomanWithLongBlackHairWearingAProfessionalOutfitSittingAtADesk
 import imgACinematographerAdjustingACameraOnAFilmSetWithBrightLightsAndEquipmentInTheBackground from "figma:asset/60cad39c0629a4491261126d102a9befb841fd37.png";
 import imgAVideoEditorFocusedOnTheirWorkAtAComputerInAModernEditingSuite from "figma:asset/a8405dd1415a49cd5ece08f3e7825582570320d7.png";
 import imgAVideoEditorFocusedOnTheirComputerScreenSurroundedByEditingEquipmentAndColorfulVideoClipsOnTheMonitorInAModernWorkspace from "figma:asset/4edbf1c052674f0332ea522da0e040c5bcaa6617.png";
-import imgFrame9 from "figma:asset/e328d7002282dca398dfc4c4976cc1178abfe131.png";
+import imgFrame9 from "figma:asset/bghero.png";
 import { imgCreativeVision, imgAndPrecision, imgInEveryFrame, imgFrame3, imgFrame5, imgFrame6, imgFrame7, imgLineContainer, imgLineContainer1, imgVector1, imgVector2, imgMaskGroup, imgEllipse1, imgEllipse2, imgEllipse3 } from "./svg-1ujj4";
 
 function Titulo() {

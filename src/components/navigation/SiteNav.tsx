@@ -2,6 +2,7 @@ import React from "react";
 import { Menu, X } from "lucide-react";
 import type { HeaderData } from "../../types/content";
 import "./SiteNav.css";
+import { motion } from "motion/react";
 
 interface SiteNavProps {
   headerData: HeaderData;
@@ -211,7 +212,7 @@ export function SiteNav({ headerData, compact = false }: SiteNavProps) {
                             href={navToId(item)}
                             className="font-[Plus_Jakarta_Sans] text-[#d6dde6] leading-[32px]"
                             style={{ fontSize: '16px', fontWeight: 400 }}
-                            onClick={handleNavClick(index, item, compactListRef)}
+                            onClick={handleNavClick(index, item)}
                           >
                             {item}
                           </a>
@@ -229,7 +230,13 @@ export function SiteNav({ headerData, compact = false }: SiteNavProps) {
                     style={{ fontSize: '16px', fontWeight: 400 }}
                     aria-label="Ir para contato"
                   >
-                    {headerData.contactButton}
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      onHoverStart={() => console.log('hover started!')}
+                    >
+                      {headerData.contactButton}
+                    </motion.button>
                   </a>
                 </div>
               </>
@@ -243,7 +250,7 @@ export function SiteNav({ headerData, compact = false }: SiteNavProps) {
                           href={navToId(item)}
                           className="font-[Plus_Jakarta_Sans] text-[#d6dde6] leading-[32px]"
                           style={{ fontSize: '16px', fontWeight: 400 }}
-                          onClick={handleNavClick(index, item, primaryListRef)}
+                          onClick={handleNavClick(index, item)}
                         >
                           {item}
                         </a>

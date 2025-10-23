@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
 import { useContent } from "./hooks/useContent";
 import type { AppContent } from "./types/content";
-import imgFrame9 from "./assets/e328d7002282dca398dfc4c4976cc1178abfe131.png";
 
+// image loaded from public/assets to avoid needing a .d.ts for image imports
 // import { Header } from "./components/sections/Header";
 import { HeroSection } from "./components/sections/HeroSection";
 import { HighlightsSection } from "./components/sections/HighlightsSection";
@@ -72,7 +72,7 @@ export default function App(): ReactElement | null {
       {/* Header + Hero */}
       <div
         className="relative min-h-[60vh] bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: `url('${imgFrame9}')` }}
+        style={{ backgroundImage: `url('/assets/bghero.png')` }}
       >
         {/* Fixed top header removed; nav lives in Hero bottom */}
         <HeroSection heroData={content.hero} headerData={content.header} headerOffset={headerHeight} />
