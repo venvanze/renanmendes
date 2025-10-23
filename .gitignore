@@ -23,7 +23,3 @@ pnpm-debug.log*
 # caches comuns
 *.log
 *.tmp
-# macOS
-.DS_Store
-*/.DS_Store
-.DS_Store
