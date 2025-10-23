@@ -4,7 +4,9 @@ import { Play, Calendar, Clock } from "lucide-react";
 import type { HighlightsData, VideoData } from "../../types/content";
 import { getYouTubeId, getYouTubeThumbnail } from "../../hooks/useContent";
 import { VideoModal } from "../VideoModal";
-import imgFrame4 from "../../assets/e328d7002282dca398dfc4c4976cc1178abfe131.png";
+// Fallback for missing image asset to avoid "Cannot find module" TypeScript error.
+// Replace with the real asset import when the file is added to ../../assets/bghero.png
+const imgFrame4: string = "";
 import { imgMaskGroup } from "../../imports/svg-rr2zm";
 
 interface HighlightsSectionProps {
@@ -184,7 +186,7 @@ export function HighlightsSection({ highlightsData }: HighlightsSectionProps) {
           aria-label="Filtro de destaques (título da sessão)"
           className="no-scrollbar overflow-x-auto"
         >
-          <ul className="flex items-center justify-center gap-6 whitespace-nowrap px-4">
+          <ul className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 px-4">
             {FILTERS.map((filter, idx) => {
               const selected = idx === activeFilter;
               return (
@@ -213,8 +215,7 @@ export function HighlightsSection({ highlightsData }: HighlightsSectionProps) {
         {videosToRender.length > 0 ? (
           <>
             <div
-              className="mx-auto grid w-full max-w-[1320px] justify-items-stretch gap-6 xl:gap-8"
-              style={{ gridTemplateColumns: gridTemplate }}
+              className="mx-auto grid w-full max-w-[1320px] justify-items-stretch gap-6 xl:gap-8 highlights-videos-grid"
             >
               {videosToRender.map((video) => (
                 <VideoCard key={video.id ?? `${video.title}-${video.videoUrl}`} video={video} onWatch={handleWatchClick} />

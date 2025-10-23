@@ -12,6 +12,7 @@ build/
 # editor / sistema
 .vscode/
 .DS_Store
+.github/
 
 # logs
 npm-debug.log*
