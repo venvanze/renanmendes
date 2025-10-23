@@ -81,7 +81,7 @@ export default function App(): ReactElement | null {
 
       <div className="mx-auto w-full max-w-[1900px]">
         <main>
-          <AboutSection aboutData={content.about} industriesData={content.industries} />
+          <AboutSection aboutData={content.about} />
           <HighlightsSection highlightsData={content.highlights} />
           <TestimonialsSection testimonialsData={content.testimonials} />
         </main>
